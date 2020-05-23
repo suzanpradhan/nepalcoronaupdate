@@ -16,22 +16,16 @@ class _NewsListState extends State<NewsList> {
   Widget build(BuildContext context) {
 
   var titleTextSize;
-  var despTextSize;
-  var titleMaxLine;
 
   MediaQuery.of(context).size.width > 800 
     ? 
   setState(() {
     titleTextSize = 20;
-    titleMaxLine = 1;
-    
     
   })
   :
   setState(() {
     titleTextSize = 16;
-    titleMaxLine = 2;
-    
     
   });
     
@@ -91,7 +85,6 @@ class _NewsListState extends State<NewsList> {
                                       widget.snapshot.data[index].title,
                                       textAlign: TextAlign.left,
                                       maxLines: 2,
-                                      overflow: TextOverflow.ellipsis,
                                       style: TextStyle(
                                           fontFamily: "Poppins",
                                           color: Color(0xffbfbfbf),

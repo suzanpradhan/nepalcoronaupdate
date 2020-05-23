@@ -61,8 +61,8 @@ class _SideWidgetsState extends State<SideWidgets> {
       snapshot.data.recovered.toString(),
       snapshot.data.deaths.toString()
     ];
-    List colorHigh = [Color(0xffF08E93), Color(0xffC2FFDC), Color(0xffFBFF87)];
-    List colorBase = [Color(0xffFA4850), Color(0xff9BCCB0), Color(0xffFFDF00)];
+    List colorHigh = [Color(0xffFBFF87), Color(0xffC2FFDC), Color(0xffF08E93)];
+    List colorBase = [Color(0xffFFDF00), Color(0xff9BCCB0), Color(0xffFA4850)];
     return ListView.builder(
         shrinkWrap: true,
         addAutomaticKeepAlives: true,

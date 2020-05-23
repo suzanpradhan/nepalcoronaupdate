@@ -51,7 +51,7 @@ class _NepalSummaryState extends State<NepalSummary> {
                 : MediaQuery.of(context).size.width/4,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(1000),
-                    border: Border.all(width: circleWidth, color: Color(0xffff0000))),
+                    border: Border.all(width: circleWidth, color: Color(0xfff2e205))),
                 child: Center(
                     child: Text(widget.snapshot.data.confirmed.toString(),
                         style: TextStyle(
@@ -106,8 +106,8 @@ class _NepalSummaryState extends State<NepalSummary> {
                 ? 160
                 : MediaQuery.of(context).size.width/4,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(1000),
-                    border: Border.all(width: circleWidth, color: Color(0xfff2e205))),
+                    borderRadius: BorderRadius.circular(1000), 
+                    border: Border.all(width: circleWidth, color: Color(0xffff0000))),
                 child: Center(
                     child: Text(widget.snapshot.data.deaths.toString(),
                         style: TextStyle(

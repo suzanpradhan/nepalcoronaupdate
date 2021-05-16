@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Nepal Covid-19 Update',
       theme: ThemeData(
-        primarySwatch: Colors.black,
+        primaryColor: Colors.black,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(),
@@ -51,22 +51,23 @@ class _MyHomePageState extends State<MyHomePage> {
                   padding: EdgeInsets.zero,
                   children: [
                     ListTile(
-                        title: Text(
-                      "Home",
-                      style: TextStyle(fontFamily: "Poppins"),
-                    ),
-                    onTap: (){
-                      navigateToAbout();
-                    },
+                      title: Text(
+                        "Home",
+                        style: TextStyle(fontFamily: "Poppins"),
+                      ),
+                      onTap: () {
+                        navigateToAbout();
+                      },
                     ),
                     ListTile(
-                        title: Text(
-                      "About",
-                      style: TextStyle(fontFamily: "Poppins"),
-                    ),
-                    onTap: (){
-                      navigateToAbout();
-                    },)
+                      title: Text(
+                        "About",
+                        style: TextStyle(fontFamily: "Poppins"),
+                      ),
+                      onTap: () {
+                        navigateToAbout();
+                      },
+                    )
                   ],
                 ),
               )
@@ -118,15 +119,17 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
         ),
-        body: homeBody()
-    );
+        body: homeBody());
   }
 
-  void navigateToAbout(){
-    Navigator.push(context, MaterialPageRoute(builder: (builder) => AboutPage()));
+  void navigateToAbout() {
+    Navigator.push(
+        context, MaterialPageRoute(builder: (builder) => AboutPage()));
   }
 
   Widget homeBody() {
-    return MediaQuery.of(context).size.width > 1000 ? ResponsiveWeb() : MobileResponsive();
+    return MediaQuery.of(context).size.width > 1000
+        ? ResponsiveWeb()
+        : MobileResponsive();
   }
 }
